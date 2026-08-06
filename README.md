@@ -27,8 +27,6 @@ Add a screenshot of the running application here:
 ## Screenshot
 
 ![Secure Password Generator](password-generator-screenshot.png)
-`screenshots/password-generator.png`
-
 ## Requirements
 
 - Python 3.10 or newer recommended
