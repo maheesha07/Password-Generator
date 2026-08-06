@@ -24,7 +24,9 @@ A polished Python Tkinter desktop application for generating strong passwords wi
 ## Screenshot
 
 Add a screenshot of the running application here:
+## Screenshot
 
+![Secure Password Generator](password-generator-screenshot.png)
 `screenshots/password-generator.png`
 
 ## Requirements
