@@ -24,3 +24,19 @@ Then open http://localhost:8000. No Python packages or backend are required. Can
 This is a **learning/demo application, NOT a professionally audited password manager**. Do not rely on it as your only copy of important credentials. Encryption does not protect against browser extensions, compromised devices, malicious injected JavaScript, or someone accessing your unlocked session. The vault remains unlocked until you click Lock or close/reload the page (no idle auto-lock). Browser data clearing, private mode, or moving domains/devices can erase access to the locally stored vault. Backups must be exported manually and stored securely. There is no master-password recovery or synchronization.
 
 The browser's localStorage contains only an encrypted vault JSON record (salt, IV, ciphertext and algorithm metadata), but login data is decrypted in memory while unlocked. Clipboard copying may leave a password in clipboard history. The strength meter is a simple estimate, not a formal password audit.
+
+## Repository layout
+
+```text
+securepass-manager/
+├── index.html       # Page structure
+├── css/
+│   └── style.css    # Styling and responsive layout
+├── js/
+│   ├── app.js       # Generator and page interactions
+│   └── vault.js     # Encrypted vault interactions
+├── README.md
+└── .gitignore
+```
+
+GitHub can now identify HTML, CSS and JavaScript as separate languages.
