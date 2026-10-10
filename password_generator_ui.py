@@ -19,8 +19,6 @@ MAX_LENGTH = 128
 DEFAULT_LENGTH = 16
 MAX_HISTORY_ITEMS = 5
 
-SIMILAR_CHARACTERS = set("0Ol1")
-
 
 class PasswordGeneratorApp:
     """A beginner-friendly, polished Tkinter password generator."""
@@ -61,7 +59,6 @@ class PasswordGeneratorApp:
         self.include_uppercase = tk.BooleanVar(value=True)
         self.include_numbers = tk.BooleanVar(value=True)
         self.include_symbols = tk.BooleanVar(value=True)
-        self.exclude_similar = tk.BooleanVar(value=False)
         self.show_password = tk.BooleanVar(value=True)
         self.password_var = tk.StringVar()
         self.status_var = tk.StringVar()
@@ -264,7 +261,6 @@ class PasswordGeneratorApp:
             ("Uppercase letters", self.include_uppercase),
             ("Numbers", self.include_numbers),
             ("Symbols", self.include_symbols),
-            ("Exclude similar characters", self.exclude_similar),
         ]
 
         for index, (text, variable) in enumerate(options):
@@ -493,12 +489,6 @@ class PasswordGeneratorApp:
             character_sets.append(string.digits)
         if self.include_symbols.get():
             character_sets.append(string.punctuation)
-
-        if self.exclude_similar.get():
-            character_sets = [
-                "".join(char for char in group if char not in SIMILAR_CHARACTERS)
-                for group in character_sets
-            ]
 
         return [group for group in character_sets if group]
 
