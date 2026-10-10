@@ -1,50 +1,67 @@
 
+# ===================================
+# SecurePass Password Manager
+# Developed by Maheesha Dassanayake
+# ===================================
+
 # Python bytecode and caches
 __pycache__/
 *.py[cod]
 *$py.class
 
-# Virtual environments
+# Python virtual environments
 .venv/
 venv/
 env/
 
-# Editor and OS files
+# Editor and IDE settings
 .vscode/
 .idea/
+*.swp
+*.swo
+
+# Operating system files
 .DS_Store
 Thumbs.db
-
-# Test and coverage output
-.pytest_cache/
-.coverage
-htmlcov/
-coverage/
-
-# Local logs and temporary files
-*.log
-*.tmp
-*.temp
+desktop.ini
 
 # Environment variables and secrets
 .env
 .env.*
 !.env.example
+*.pem
+*.key
 
-# Node.js dependencies (if added later)
+# Node.js dependencies
 node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Build output
+# Build and distribution folders
 dist/
 build/
+.cache/
 
-# Local vault backups and sensitive files
+# Test and coverage files
+.pytest_cache/
+.coverage
+htmlcov/
+coverage/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+*.bak
+
+# Local password vault backups
 *.vault
 *.vault.json
 *.backup.json
+vault-backups/
 
 # Local configuration
 config.local.json
+settings.local.json
+
